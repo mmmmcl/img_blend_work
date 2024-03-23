@@ -11,8 +11,8 @@ cv::Mat LaplacianBlend(const cv::Mat &left, const cv::Mat &right, const cv::Mat 
 }
 
 int main() {
-    cv::Mat img8UL = cv::imread("../pic1.png");  //build与图片与main同级目录
-    cv::Mat img8UR = cv::imread("../pic2.png");
+    cv::Mat img8UL = cv::imread("../data/pic1.png");  //build与图片与main同级目录
+    cv::Mat img8UR = cv::imread("../data/pic2.png");
 
     
     assert(!img8UL.empty());
@@ -35,7 +35,7 @@ int main() {
 
     blendImg.convertTo(blendImg, CV_8UC3);
     cv::imshow("blended", blendImg);
-    cv::imwrite("../blend.png",blendImg);
+    cv::imwrite("../data/blend.png",blendImg);
     cv::waitKey(0);
     return 0;
 }
