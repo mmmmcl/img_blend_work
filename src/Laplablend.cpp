@@ -1,11 +1,12 @@
 /*
  * @Date: 2024-03-23 21:25:24
  * @LastEditors: zxh vocvocal@163.com
- * @LastEditTime: 2024-03-23 22:27:45
+ * @LastEditTime: 2024-03-24 19:22:41
  * @FilePath: /img_fusion/src/Laplablend.cpp
  */
 #include "Laplablend.hpp"
 #include <iostream>
+#include <opencv2/imgproc.hpp>
 #include <opencv2/opencv.hpp>
 #include <string>
 
@@ -33,7 +34,7 @@ void LaplacianBlending::buildGaussianPyramid()
 
     maskGaussianPyramid.clear();
     cv::Mat currentImg;
-    cv::cvtColor(blendMask, currentImg, CV_GRAY2BGR);
+    cv::cvtColor(blendMask, currentImg, cv::COLOR_GRAY2BGR);
     //保存mask金字塔的每一层图像
     maskGaussianPyramid.push_back(currentImg); // 0-level
     
@@ -47,7 +48,7 @@ void LaplacianBlending::buildGaussianPyramid()
             cv::pyrDown(currentImg, _down, leftHighestLevel.size()); // lowest level
 
         cv::Mat down;
-        cv::cvtColor(_down, down, CV_GRAY2BGR);
+        cv::cvtColor(_down, down, cv::COLOR_GRAY2BGR);
         // add color blend mask into mask Pyramid
         maskGaussianPyramid.push_back(down);
         currentImg = _down;
