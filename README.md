@@ -1,7 +1,7 @@
 <!--
  * @Date: 2024-03-23 22:40:15
- * @LastEditors: zxh vocvocal@163.com
- * @LastEditTime: 2024-03-23 22:59:03
+ * @LastEditors: gyt vocvocal@163.com
+ * @LastEditTime: 2024-04-21 20:08:28
  * @FilePath: /img_fusion/README.md
 -->
 # 信息融合大作业1
@@ -36,4 +36,5 @@ sudo apt install cmake gcc libopencv-dev
 融合后（15层塔）：
 
    ![](./data/blend.png)
+   
    

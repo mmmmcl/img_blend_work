@@ -1,7 +1,7 @@
 /*
  * @Date: 2024-03-23 21:25:24
- * @LastEditors: zxh vocvocal@163.com
- * @LastEditTime: 2024-03-24 19:22:41
+ * @LastEditors: gyt vocvocal@163.com
+ * @LastEditTime: 2024-04-21 20:08:19
  * @FilePath: /img_fusion/src/Laplablend.cpp
  */
 #include "Laplablend.hpp"
@@ -9,6 +9,7 @@
 #include <opencv2/imgproc.hpp>
 #include <opencv2/opencv.hpp>
 #include <string>
+
 
 LaplacianBlending::LaplacianBlending(const cv::Mat &_left, const cv::Mat &_right, const cv::Mat &_blendMask, int _levels) : // construct function, used in LaplacianBlending lb(l,r,m,4);
                                                                                                          left(_left), right(_right), blendMask(_blendMask), levels(_levels)
